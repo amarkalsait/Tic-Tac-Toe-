@@ -1,0 +1,97 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://t4.ftcdn.net/jpg/02/79/75/45/360_F_279754521_z5fz8zm9AoqIriAaeKOKWPTmuh1Xr2Qg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tic-tac-toe {
+    box-shadow: rgb(0, 195, 255) 0px 54px 55px, rgb(0, 145, 255) 0px -12px 30px, rgb(0, 140, 255) 0px 4px 6px, rgb(0, 110, 255) 0px 12px 13px, rgb(0, 136, 248) 0px -3px 5px;
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.8); */
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(60px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(34, 82, 196, 0.852);
+    width: 320px;
+    animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    color: #ffffffdd;
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0%, 100% { color: #fffcfc; }
+    50% { color: #7d8ef4; }
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    background-color: #66a6ff;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #0ac6f5;
+}
